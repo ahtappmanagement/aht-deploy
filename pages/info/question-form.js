@@ -206,7 +206,7 @@ const QuestionForm = () => {
             />
           </div>
           <ReCAPTCHA
-            sitekey="6Let05EkAAAAAAXLNfcHElxeD58bIbTUENdxdc-K"
+            sitekey="6LceMvQkAAAAAE5ZfHFsQabanlVBIHsgi3LRuPK_"
             onChange={() => setActiveBtn(false)}
           />
 
