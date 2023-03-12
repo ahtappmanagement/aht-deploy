@@ -147,7 +147,7 @@ const QuestionForm = () => {
 
       <form
         // onSubmit={() => handleSubmit()}
-        action="mailto:zb.mv01@gmail.com"
+        action="mailto:amir@ahtfoods.com"
         method="post"
         enctype="text/plain"
         className=" rounded-md w-full md:w-8/12 py-16 mx-auto flex justify-center items-center md:mt-36"
