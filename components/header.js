@@ -12,7 +12,7 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { MdArrowDropDown, MdOutlineArrowRight } from "react-icons/md";
-import { site, products } from "../server/api";
+import { products } from "../server/api";
 import {
   achievementLogos,
   achievementMobileView,
@@ -56,7 +56,7 @@ const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [product, setProduct] = useState(false);
   const [achievement, setAchievement] = useState(false);
-  const [about, setAbout] = useState(false);
+  const [aboutState, setAbout] = useState(false);
   const [bulk, setBulk] = useState(false);
   const [brand, setBrand] = useState(false);
   const [newsState, setNews] = useState(false);
@@ -85,7 +85,8 @@ const Header = () => {
             <div
               id="PRODUCTS"
               onClick={() => setProduct(!product)}
-              className={navItemPhoneView}>
+              className={navItemPhoneView}
+            >
               PRODUCTS BULK/FOOD SERVICE
             </div>
             <button className={closeMenu} onClick={() => closeMenues()}>
@@ -96,29 +97,36 @@ const Header = () => {
           {product && (
             <div className=" shadow-inner">
               <Link
-                href={`${site}${products}/category/1&type=retail`}
-                className={productMobileView}>
-                SUN-DRIED <MdOutlineArrowRight />
-              </Link>
-
-              <Link
-                href={`${site}${products}/category/2&type=retail`}
-                className={productMobileView}>
-                AIR-DRIED <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`${site}${products}/category/3&type=retail`}
-                className={productMobileView}>
-                FREEZE-DRIED <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`${site}${products}/category/5&type=retail`}
-                className={productMobileView}>
+                href={`/${products}/category/5&type=retail`}
+                className={productMobileView}
+              >
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/6&type=retail`}
-                className={productMobileView}>
+                href={`/${products}/category/1&type=retail`}
+                className={productMobileView}
+              >
+                SUN-DRIED FRUITS <MdOutlineArrowRight />
+              </Link>
+
+              <Link
+                href={`/${products}/category/2&type=retail`}
+                className={productMobileView}
+              >
+                AIR-DRIED FRUITS
+                <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/3&type=retail`}
+                className={productMobileView}
+              >
+                FREEZE-DRIED FRUITS & VEG
+                <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/6&type=retail`}
+                className={productMobileView}
+              >
                 SAFFRON <MdOutlineArrowRight />
               </Link>
             </div>
@@ -134,29 +142,35 @@ const Header = () => {
           {bulk && (
             <div className="shadow-inner">
               <Link
-                href={`${site}${products}/category/1&type=bulk`}
-                className={productMobileView}>
-                SUN-DRIED <MdOutlineArrowRight />
-              </Link>
-
-              <Link
-                href={`${site}${products}/category/2&type=bulk`}
-                className={productMobileView}>
-                AIR-DRIED <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`${site}${products}/category/3&type=bulk`}
-                className={productMobileView}>
-                FREEZE-DRIED <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`${site}${products}/category/5&type=bulk`}
-                className={productMobileView}>
+                href={`/${products}/category/5&type=bulk`}
+                className={productMobileView}
+              >
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/6&type=bulk`}
-                className={productMobileView}>
+                href={`/${products}/category/1&type=bulk`}
+                className={productMobileView}
+              >
+                SUN-DRIED FRUITS <MdOutlineArrowRight />
+              </Link>
+
+              <Link
+                href={`/${products}/category/2&type=bulk`}
+                className={productMobileView}
+              >
+                AIR-DRIED FRUITS <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/3&type=bulk`}
+                className={productMobileView}
+              >
+                FREEZE-DRIED FRUITS & VEG
+                <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/6&type=bulk`}
+                className={productMobileView}
+              >
                 SAFFRON <MdOutlineArrowRight />
               </Link>
             </div>
@@ -165,7 +179,8 @@ const Header = () => {
           <div className={navItemListPhoneView}>
             <div
               onClick={() => setAchievement(!achievement)}
-              className={navItemPhoneView}>
+              className={navItemPhoneView}
+            >
               ACHIEVEMENTS
             </div>
           </div>
@@ -278,7 +293,8 @@ const Header = () => {
           <div className={navItemListPhoneView}>
             <div
               onClick={() => setNews(!newsState)}
-              className={navItemPhoneView}>
+              className={navItemPhoneView}
+            >
               NEWS AND EVENTS
             </div>
           </div>
@@ -286,50 +302,53 @@ const Header = () => {
           {/* EVENTS AND NEWS TOGGLE  */}
           {newsState && (
             <div className="shadow-inner">
-              <Link href={`${site}event-news`} className={eventsNew}>
+              <Link href={`/event-news`} className={eventsNew}>
                 Events
               </Link>
 
-              <Link href={`${site}event-news`} className={eventsNew}>
+              <Link href={`/event-news`} className={eventsNew}>
                 News
               </Link>
             </div>
           )}
 
           <div className={navItemListPhoneView}>
-            <div onClick={() => setAbout(!about)} className={navItemPhoneView}>
+            <div
+              onClick={() => setAbout(!aboutState)}
+              className={navItemPhoneView}
+            >
               ABOUT US
             </div>
           </div>
 
           {/* ABOUT TOGGLE  */}
-          {about && (
+          {aboutState && (
             <div className="shadow-inner">
-              <a href={`/info/about-us`} className={productMobileView}>
+              <a href={`/about`} className={productMobileView}>
                 ABOUT US
               </a>
 
-              <a href={`/info/factories`} className={productMobileView}>
+              <a href={`/e-catalogue`} className={productMobileView}>
+                CATALOGUE
+              </a>
+
+              <a href={`/factory`} className={productMobileView}>
                 FACTORIES
               </a>
 
-              <a
-                href={`/info/quality-food-safety`}
-                className={productMobileView}>
+              <a href={`/quality-food-safety`} className={productMobileView}>
                 QUALITY AND FOOD SAFETY
               </a>
-              <a href={`/info/custom-packing`} className={productMobileView}>
+              <a href={`/custom-packing`} className={productMobileView}>
                 CUSTOM PACKING
               </a>
-              <a
-                href={`/info/research-development`}
-                className={productMobileView}>
+              <a href={`/research-development`} className={productMobileView}>
                 R & D
               </a>
-              <a href={`/info/FAQ`} className={productMobileView}>
+              <a href={`/FAQ`} className={productMobileView}>
                 FAQ
               </a>
-              <a href={`/info/question-form`} className={productMobileView}>
+              <a href={`/contact`} className={productMobileView}>
                 Contact Us
               </a>
             </div>
@@ -338,7 +357,7 @@ const Header = () => {
       ) : null}
 
       <nav className={navtailwindstyles}>
-        <Link href={site}>
+        <Link href="/">
           <Image src={Logo} alt="AHT FOODS" className={logo} />
         </Link>
 
@@ -349,34 +368,46 @@ const Header = () => {
               <div className={flexCenter}>
                 <div className={deskViewNavItems}>
                   {" "}
-                  PRODUCTS <span > <MdArrowDropDown/> </span>
+                  PRODUCTS{" "}
+                  <span>
+                    {" "}
+                    <MdArrowDropDown />{" "}
+                  </span>
                 </div>
                 <div className="text-xs">BULK/FOOD SERVICE</div>
               </div>
               <div className={navItemListSubList}>
                 <Link
-                  href={`${site}${products}/category/1&type=bulk`}
-                  className={productStyle}>
-                  SUN-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/2&type=bulk`}
-                  className={productStyle}>
-                  AIR-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/3&type=bulk`}
-                  className={productStyle}>
-                  FREEZE-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/5&type=bulk`}
-                  className={productStyle}>
+                  href={`/${products}/category/5&type=bulk`}
+                  className={productStyle}
+                >
                   NUTS <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/6&type=bulk`}
-                  className={productStyle}>
+                  href={`/${products}/category/1&type=bulk`}
+                  className={productStyle}
+                >
+                  SUN-DRIED FRUITS FRUITS
+                  <MdOutlineArrowRight />
+                </Link>
+                <Link
+                  href={`/${products}/category/2&type=bulk`}
+                  className={productStyle}
+                >
+                  AIR-DRIED FRUITS
+                  <MdOutlineArrowRight />
+                </Link>
+                <Link
+                  href={`/${products}/category/3&type=bulk`}
+                  className={productStyle}
+                >
+                  FREEZE-DRIED FRUITS & VEG
+                  <MdOutlineArrowRight />
+                </Link>
+                <Link
+                  href={`/${products}/category/6&type=bulk`}
+                  className={productStyle}
+                >
                   SAFFRON <MdOutlineArrowRight />
                 </Link>
               </div>
@@ -386,34 +417,46 @@ const Header = () => {
               <div className={flexCenter}>
                 <div className={deskViewNavItems}>
                   {" "}
-                  PRODUCTS <span > <MdArrowDropDown/> </span>
+                  PRODUCTS{" "}
+                  <span>
+                    {" "}
+                    <MdArrowDropDown />{" "}
+                  </span>
                 </div>
                 <div className="text-xs">PRIVATE LABEL</div>
               </div>
               <div className={navItemListSubList}>
                 <Link
-                  href={`${site}${products}/category/1&type=retail`}
-                  className={productStyle}>
-                  SUN-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/2&type=retail`}
-                  className={productStyle}>
-                  AIR-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/3&type=retail`}
-                  className={productStyle}>
-                  FREEZE-DRIED <MdOutlineArrowRight />
-                </Link>
-                <Link
-                  href={`${site}${products}/category/5&type=retail`}
-                  className={productStyle}>
+                  href={`/${products}/category/5&type=retail`}
+                  className={productStyle}
+                >
                   NUTS <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/6&type=retail`}
-                  className={productStyle}>
+                  href={`/${products}/category/1&type=retail`}
+                  className={productStyle}
+                >
+                  SUN-DRIED FRUITS <MdOutlineArrowRight />
+                </Link>
+                <Link
+                  href={`/${products}/category/2&type=retail`}
+                  className={productStyle}
+                >
+                  AIR-DRIED FRUITS
+                  <MdOutlineArrowRight />
+                </Link>
+                <Link
+                  href={`/${products}/category/3&type=retail`}
+                  className={productStyle}
+                >
+                  FREEZE-DRIED FRUITS & VEG
+                  <MdOutlineArrowRight />
+                </Link>
+
+                <Link
+                  href={`/${products}/category/6&type=retail`}
+                  className={productStyle}
+                >
                   SAFFRON <MdOutlineArrowRight />
                 </Link>
               </div>
@@ -421,7 +464,11 @@ const Header = () => {
 
             <div className="m-2.5 group relative cursor-pointer  ">
               <div className={deskViewNavItems}>
-                ACHIEVEMENTS <span > <MdArrowDropDown/> </span>
+                ACHIEVEMENTS{" "}
+                <span>
+                  {" "}
+                  <MdArrowDropDown />{" "}
+                </span>
               </div>
               <div className={achievementSubList}>
                 <Link href="#" className={achievementStyle}>
@@ -497,7 +544,11 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                BRANDS <span > <MdArrowDropDown/> </span>
+                BRANDS{" "}
+                <span>
+                  {" "}
+                  <MdArrowDropDown />{" "}
+                </span>
               </div>
               <div className={brandsEventSubList}>
                 <Link href={`#`} className={brandMobileView}>
@@ -521,14 +572,18 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                EVENTS & NEWS <span > <MdArrowDropDown/> </span>
+                EVENTS & NEWS{" "}
+                <span>
+                  {" "}
+                  <MdArrowDropDown />{" "}
+                </span>
               </div>
               <div className={brandsEventSubList}>
-                <Link href={`${site}event-news`} className={productStyle}>
+                <Link href={`/event-news`} className={productStyle}>
                   Events
                 </Link>
 
-                <Link href={`${site}event-news`} className={productStyle}>
+                <Link href={`/event-news`} className={productStyle}>
                   News
                 </Link>
               </div>
@@ -536,34 +591,38 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                ABOUT US <span > <MdArrowDropDown/> </span>
+                ABOUT US{" "}
+                <span>
+                  {" "}
+                  <MdArrowDropDown />{" "}
+                </span>
               </div>
               <div className={navItemListSubList}>
-                <Link className={productStyle} href={`/info/about-us`}>
+                <Link className={productStyle} href={`/about`}>
                   ABOUT US
                 </Link>
 
-                <Link className={productStyle} href={`/info/factories`}>
+                <Link className={productStyle} href={`/e-catalogue`}>
+                  CATALOGUE
+                </Link>
+
+                <Link className={productStyle} href={`/factory`}>
                   FACTORIES
                 </Link>
 
-                <Link
-                  className={productStyle}
-                  href={`/info/quality-food-safety`}>
+                <Link className={productStyle} href={`/quality-food-safety`}>
                   QUALITY AND FOOD SAFETY
                 </Link>
-                <Link className={productStyle} href={`/info/custom-packing`}>
+                <Link className={productStyle} href={`/custom-packing`}>
                   CUSTOM PACKING
                 </Link>
-                <Link
-                  className={productStyle}
-                  href={`/info/research-development`}>
+                <Link className={productStyle} href={`/research-development`}>
                   R & D
                 </Link>
-                <Link className={productStyle} href={`/info/FAQ`}>
+                <Link className={productStyle} href={`/FAQ`}>
                   FAQ
                 </Link>
-                <Link className={productStyle} href={`/info/question-form`}>
+                <Link className={productStyle} href={`/contact`}>
                   Contact Us
                 </Link>
               </div>
@@ -576,7 +635,7 @@ const Header = () => {
               <BiSearchAlt2 onClick={() => handleSearch()} />
             </div>
             <input
-            id="header-search-input"
+              id="header-search-input"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className={searchInputDesk}
@@ -598,7 +657,8 @@ const Header = () => {
             </Link>
             <Link
               href="https://api.whatsapp.com/send/?phone=989123865564&text&type=phone_number&app_absent=0"
-              target="_blank">
+              target="_blank"
+            >
               <FaWhatsapp className={navItemPhoneView} />
             </Link>
             <Link href="mailto:info@ahtfoods.com? subject= subject text">

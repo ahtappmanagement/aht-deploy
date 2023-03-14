@@ -22,7 +22,7 @@ const Card = (props) => {
       <div className="whole-product-in-container  w-[250px] lg:w-[230px] truncate transition ease-in-out duration-300 shadow  p-4 text-[#660100] cursor-pointer">
         <Link href={`/products/${props.product.id}`}>
           <div
-            href={`products/${props.product.id}`}
+            href={`/products/${props.product.id}`}
             className="h-48 w-48 mb-4  mx-auto">
             {props.product.image[0]?.length > 0 ? (
               <>

@@ -5,7 +5,7 @@ import Image from "next/image";
 // import { Inter } from "@next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
-import { api, site, path, products, category } from "config/api";
+import { api, path, products, category } from "config/api";
 import desktopSlider from "../assets/desktopSlider/index";
 import phoneSlider from "../assets/phoneSlider/index";
 import Card from "@/components/card";
@@ -115,7 +115,7 @@ const Home = ({ popular, news, events }) => {
                     {i.title}
                   </p>
                   <a
-                    href={`${site}event-news/${i.title}`}
+                    href={`/event-news/${i.title}`}
                     className="text-xs md:text-sm text-[#A54646]">
                     click here to read the article
                   </a>

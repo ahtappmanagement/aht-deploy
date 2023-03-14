@@ -1,6 +1,6 @@
 import { NewInstance } from "@/api/http";
 import EventsSideNavigation from "@/components/eventsSideNavigation";
-import { api, news, path, site } from "@/config/api";
+import { api, news, path } from "@/config/api";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 

@@ -1,7 +1,7 @@
-import one from "../../assets/RandD/one.jpg";
-import two from "../../assets/RandD/two.jpg";
-import three from "../../assets/RandD/three.jpg";
-import four from "../../assets/RandD/four.jpg";
+import one from "../assets/RandD/one.jpg";
+import two from "../assets/RandD/two.jpg";
+import three from "../assets/RandD/three.jpg";
+import four from "../assets/RandD/four.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import Image from "next/image";

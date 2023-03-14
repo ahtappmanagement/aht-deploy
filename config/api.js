@@ -1,6 +1,6 @@
-export const URL = 'https://ahtback-u095.onrender.com'
-export const api = 'https://ahtback-u095.onrender.com/';
-export const path = `https://ahtback-u095.onrender.com/files/`;
+export const URL = 'https://nodejs-873lch.chbk.run'
+export const api = 'https://nodejs-873lch.chbk.run/';
+export const path = `https://nodejs-873lch.chbk.run/files/`;
 export const site = 'https://ahtfoods.netlify.app/';
 export const category = 'category';
 export const subcategory = 'subcategory';

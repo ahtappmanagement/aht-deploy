@@ -1,5 +1,5 @@
-import map from "../../assets/factories/map.jpg";
-import factories from "../../assets/factories/index.js";
+import map from "../assets/factories/map.jpg";
+import factories from "../assets/factories/index.js";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Head from "next/head";

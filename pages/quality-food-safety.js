@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import Image from "next/image";
-import qualityAndFoodSafety from "../../assets/qualityAndFoodSafety/qualityAndFoodSafety";
+import qualityAndFoodSafety from "../assets/qualityAndFoodSafety/qualityAndFoodSafety";
 const QualityAndFoodSafety = () => {
   return (
     <div className="w-9/12 mx-auto my-8 md:mt-48 text-[#7D2F2F]">

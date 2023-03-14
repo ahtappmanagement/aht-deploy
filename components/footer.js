@@ -1,7 +1,7 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
-import { api, events, path, site } from "config/api";
+import { api, events, path } from "config/api";
 import { useEffect } from "react";
 import { NewInstance } from "api/http";
 import { useState } from "react";
@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="pb-6 border-b md:border[#F8F8F8]">
         <div id="footerParts" className=" md:flex ">
           <div className=" md:border-r md:border[#F8F8F8] md:pr-28 md:mr-8 mt-8 md:m1 pt-4">
-            <h4 className="text-sm md:base lg:text-lg">AHT HEAD OFFICE </h4>
+            <h4 className="">AHT FOODS HEAD OFFICE </h4>
             <div className=" text-xs md:text-sm my-2">
               20 Mohri St., North Valiasr Ave.
               <br />
@@ -70,22 +70,25 @@ const Footer = () => {
           </div>
 
           <div className=" md:border-r md:border[#F8F8F8] pr-32 w-64 mt-8 md:m1 pt-4">
-            <p className="text-lg">QUICK LINKS</p>
+            <p className="">QUICK LINKS</p>
             <div className="text-sm">
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/question-form`}>Contact us</a>
+                <a href={`/contact`}>Contact us</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/custom-packing`}>Custom Packing</a>
+                <a href={`/e-catalogue`}>Catalogue</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/FAQ`}>FAQ</a>
+                <a href={`/custom-packing`}>Custom Packing</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/about-us`}>About Us</a>
+                <a href={`/FAQ`}>FAQ</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/factories`}>Factories</a>
+                <a href={`/about`}>About Us</a>
+              </p>
+              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+                <a href={`/factory`}>Factories</a>
               </p>
             </div>
           </div>
