@@ -7,9 +7,10 @@ const YouMayLike = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    NewInstance.get(`${api}products?category=3&type=retail&_limit=6`).then(
+    NewInstance.get(`${api}products?_page=1&_limit=6`).then(
       (res) => setProducts(res.data)
     );
+    // 
   }, []);
   return (
     //   <div id="popularWrapper" className="w-full md:p-8 ">

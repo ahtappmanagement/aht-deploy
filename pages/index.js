@@ -17,10 +17,10 @@ import YouMayLike from "@/components/YouMayLike";
 
 export const getStaticProps = async () => {
   // FETCH POPULAR PRODUCTS
-  const res = await fetch(
-    `${api}${products}?${category}=3&type=retail&_limit=6`
-  );
-  const data = await res.json();
+  // const res = await fetch(
+  //   `${api}${products}?_page=1&_limit=6`
+  // );
+  // const data = await res.json();
 
   // FETCH POPULAR PRODUCTS
   const newsRes = await fetch(`${api}news?_limit=3`);
@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      popular: data,
+      // popular: data,
       news: newsData,
       events: eventsData,
     },
@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
 
 //--------------------------------------------COMPONENT--------------------------------------------//
 
-const Home = ({ popular, news, events }) => {
+const Home = ({ /*popular ,*/ news, events }) => {
   const phoneSlid = [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT];
   const deskSlid = [
     desktopSlider.PistaD,
