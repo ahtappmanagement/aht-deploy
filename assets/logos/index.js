@@ -1,13 +1,13 @@
 const logos = {
-    IFS: require('./IFS.png'),
-    SEDEX: require('./SEDEX.png'),
-    KOSHER: require('./KOSHER.png'),
-    USDA: require('./USDA.png'),
-    FDA: require('./FDA.png'),
-    ORGANIC: require('./ORGANIC.png'),
-    HALAL: require('./HALAL.png'),
-    KSTAR: require('./KSTAR.png'),
-    FSSC: require('./FSSC.png'),
+    IFS: require('./IFS.jpg'),
+    SEDEX: require('./SEDEX.jpg'),
+    KOSHER: require('./KOSHER.jpg'),
+    USDA: require('./USDA.jpg'),
+    FDA: require('./FDA.jpg'),
+    ORGANIC: require('./ORGANIC.jpg'),
+    HALAL: require('./HALAL.jpg'),
+    KSTAR: require('./KSTAR.jpg'),
+    FSSC: require('./FSSC.jpg'),
 }
 
 export default logos;

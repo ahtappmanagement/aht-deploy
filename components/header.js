@@ -99,12 +99,16 @@ const Header = () => {
               <Link
                 href={`/${products}/category/5&type=retail`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
                 href={`/${products}/category/1&type=retail`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 SUN-DRIED FRUITS <MdOutlineArrowRight />
               </Link>
@@ -112,6 +116,8 @@ const Header = () => {
               <Link
                 href={`/${products}/category/2&type=retail`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 AIR-DRIED FRUITS
                 <MdOutlineArrowRight />
@@ -119,6 +125,8 @@ const Header = () => {
               <Link
                 href={`/${products}/category/3&type=retail`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 FREEZE-DRIED FRUITS & VEG
                 <MdOutlineArrowRight />
@@ -126,6 +134,8 @@ const Header = () => {
               <Link
                 href={`/${products}/category/6&type=retail`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 SAFFRON <MdOutlineArrowRight />
               </Link>
@@ -144,12 +154,16 @@ const Header = () => {
               <Link
                 href={`/${products}/category/5&type=bulk`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
                 href={`/${products}/category/1&type=bulk`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 SUN-DRIED FRUITS <MdOutlineArrowRight />
               </Link>
@@ -157,12 +171,16 @@ const Header = () => {
               <Link
                 href={`/${products}/category/2&type=bulk`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 AIR-DRIED FRUITS <MdOutlineArrowRight />
               </Link>
               <Link
                 href={`/${products}/category/3&type=bulk`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 FREEZE-DRIED FRUITS & VEG
                 <MdOutlineArrowRight />
@@ -170,6 +188,8 @@ const Header = () => {
               <Link
                 href={`/${products}/category/6&type=bulk`}
                 className={productMobileView}
+                onClick={() => closeMenues()}
+
               >
                 SAFFRON <MdOutlineArrowRight />
               </Link>
@@ -273,19 +293,15 @@ const Header = () => {
             <div className="shadow-inner">
               <Link href={`#`} className={brandMobileView}>
                 <Image src={majestic} alt="majestic" className={brandImg} />
-                MAJESTIC
               </Link>
               <Link href={`#`} className={brandMobileView}>
                 <Image src={peachFull} alt="peachFull" className={brandImg} />
-                PEACH FULL
               </Link>
               <Link href={`#`} className={brandMobileView}>
                 <Image src={kindKids} alt="kindKids" className={brandImg} />
-                KIND KIDS
               </Link>
               <Link href={`#`} className={brandMobileView}>
                 <Image src={queen} alt="queen" className={brandImg} />
-                QUEEN DIAMOND
               </Link>
             </div>
           )}
@@ -324,37 +340,53 @@ const Header = () => {
           {/* ABOUT TOGGLE  */}
           {aboutState && (
             <div className="shadow-inner">
-              <a href={`/about`} className={productMobileView}>
+              <a href={`/about`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 ABOUT US
               </a>
 
-              <a href={`/e-catalogue`} className={productMobileView}>
+              <a href={`/e-catalogue`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 CATALOGUE
               </a>
 
-              <a href={`/factory`} className={productMobileView}>
+              <a href={`/factory`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 FACTORIES
               </a>
 
-              <a href={`/quality-food-safety`} className={productMobileView}>
+              <a href={`/quality-food-safety`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 QUALITY AND FOOD SAFETY
               </a>
-              <a href={`/custom-packing`} className={productMobileView}>
+              <a href={`/custom-packing`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 CUSTOM PACKING
               </a>
-              <a href={`/research-development`} className={productMobileView}>
+              <a href={`/research-development`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 R & D
               </a>
-              <a href={`/FAQ`} className={productMobileView}>
+              <a href={`/FAQ`} className={productMobileView}
+                onClick={() => closeMenues()}
+              >
                 FAQ
-              </a>
-              <a href={`/contact`} className={productMobileView}>
-                Contact Us
               </a>
             </div>
           )}
+          <a href={`/contact`} className={navItemListPhoneView}>
+            CONTACT
+          </a>
         </div>
       ) : null}
+
+      {/* CONTACT LINK */}
 
       <nav className={navtailwindstyles}>
         <Link href="/">
@@ -591,7 +623,7 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                ABOUT US{" "}
+                ABOUT{" "}
                 <span>
                   {" "}
                   <MdArrowDropDown />{" "}
@@ -622,10 +654,11 @@ const Header = () => {
                 <Link className={productStyle} href={`/FAQ`}>
                   FAQ
                 </Link>
-                <Link className={productStyle} href={`/contact`}>
-                  Contact Us
-                </Link>
               </div>
+            </div>
+
+            <div className={deskViewNavItems}>
+              <Link href={`/contact`}>CONTACT</Link>
             </div>
           </div>
 

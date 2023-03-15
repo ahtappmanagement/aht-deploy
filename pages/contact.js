@@ -104,9 +104,9 @@ const QuestionForm = () => {
           <div>
             <h3 className="text-large md:text-2xl text-gray-700">Call:</h3>
             <p className="text-gray-500 my-2">
-              <a href="tell:+989121112867">(+98) 9121112867</a>
+              <a href="tell:+989121112867">(+98) 9123865564</a>
               <br />
-              <a href="tell:+982126217316-9">(+98 21) 26217316-9</a>
+              <a href="tell:+982126217316-9">(+98 21) 26217316-20</a>
             </p>
           </div>
         </div>

@@ -45,17 +45,21 @@ const Footer = () => {
               <br />
               Tehran 1966783661, Iran
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href="tell:+982126217316">(+98 21) 26217316-9</a>
+                Tel:<a href="tell:+982126217316">(+98 21)26217316-20</a>
+                <br/> ext: 124 or 125  
+
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+                Mobile and Whatsapp:
+                <br/>
                 <a href="tell:+989123865560">(+98) 9123865564</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              {/* <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
                 <a href="tell:+982126217320">
                   (+98 21) 26217320
                   <br/> ext: 124 or 125  
                 </a>
-              </p>
+              </p> */}
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
                 <a href="mailto:info@ahtfoods.com? subject= subject text">
                   info@ahtfoods.com
