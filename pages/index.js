@@ -44,14 +44,15 @@ export const getStaticProps = async () => {
 const Home = ({ /*popular ,*/ news, events }) => {
   const phoneSlid = [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT];
   const deskSlid = [
+    desktopSlider.happy,
     desktopSlider.PistaD,
     desktopSlider.FigsD,
-    desktopSlider.AHTD,
+    desktopSlider.AHTD
   ];
 
   return (
     <>
-      {/* SLIDERS */}
+      {/* SLIDERS */} 
       <div className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -62,7 +63,7 @@ const Home = ({ /*popular ,*/ news, events }) => {
           style={{ margin: "0 0 2rem 0" }}>
           {deskSlid?.map((slide, index = 0) => (
             <SwiperSlide key={`${index++}`}>
-              <div className="mt-16 md:mt-2" key={index++}>
+              <div className="mt-16 md:mt-36" key={index++}>
                 <Image
                   key={index++}
                   className="w-9/12 mx-auto hidden md:block"
