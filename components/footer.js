@@ -23,16 +23,16 @@ const Footer = () => {
           className="flex text-2xl lg:text-3xl "
         >
           <a href="https://www.instagram.com/ahtfoods/" target="_blank" rel="noreferrer">
-            <FaInstagram className="mr-4 transition duration-300 ease-in-out hover:text-red-100" />
+            <FaInstagram className="mr-4 transition duration-300 ease-in-out hover:text-[#8A0019]" />
           </a>
           <a
             href="https://api.whatsapp.com/send/?phone=989123865564&text&type=phone_number&app_absent=0"
             target="_blank" rel="noreferrer"
           >
-            <FaWhatsapp className="mr-4 transition duration-300 ease-in-out hover:text-red-100 " />
+            <FaWhatsapp className="mr-4 transition duration-300 ease-in-out hover:text-[#8A0019] " />
           </a>
           <a href="mailto:info@ahtfoods.com? subject= subject text">
-            <CgMail className="mr-4 transition duration-300 ease-in-out hover:text-red-100" />
+            <CgMail className="mr-4 transition duration-300 ease-in-out hover:text-[#8A0019]" />
           </a>
         </div>
       </div>
@@ -44,28 +44,28 @@ const Footer = () => {
               20 Mohri St., North Valiasr Ave.
               <br />
               Tehran 1966783661, Iran
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 Tel:<a href="tell:+982126217316">(+98 21)26217316-20</a>
                 <br/> ext: 124 or 125  
 
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 Mobile and Whatsapp:
                 <br/>
                 <a href="tell:+989123865560">(+98) 9123865564</a>
               </p>
-              {/* <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              {/* <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href="tell:+982126217320">
                   (+98 21) 26217320
                   <br/> ext: 124 or 125  
                 </a>
               </p> */}
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href="mailto:info@ahtfoods.com? subject= subject text">
                   info@ahtfoods.com
                 </a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href="mailto:info@aht.ir? subject= subject text">
                   info@aht.ir
                 </a>
@@ -76,22 +76,22 @@ const Footer = () => {
           <div className=" md:border-r md:border[#F8F8F8] pr-32 w-64 mt-8 md:m1 pt-4">
             <p className="">QUICK LINKS</p>
             <div className="text-sm">
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/contact`}>Contact us</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/e-catalogue`}>Catalogue</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/custom-packing`}>Custom Packing</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/FAQ`}>FAQ</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/about`}>About Us</a>
               </p>
-              <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
+              <p className="my-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
                 <a href={`/factory`}>Factories</a>
               </p>
             </div>
@@ -102,13 +102,13 @@ const Footer = () => {
             <div className="flex flex-col md:justify-around md:items-center">
               <input
                 type="email"
-                placeholder="YOUR EMAIL ADDRESS"
-                className="bg-white px-7 py-2 rounded-xl w-11/12 placeholder-red-300 text-xs md:text-sm my-2 md:my-6"
+                placeholder="Your email here"
+                className="bg-white px-7 py-2 rounded-xl w-11/12 placeholder-[#8A0019] text-[#8A0019] text-xs my-2 md:my-6"
               />
               <input
                 type="submit"
                 placeholder="SUBMIT"
-                className="bg-white px-auto py-2 rounded-xl my-4 w-11/12 text-red-900 my-2 md:my-6 transition duration-300 ease-in-out hover:bg-red-50"
+                className="bg-white px-auto py-2 rounded-xl my-4 w-11/12 text-[#8A0019] hover:text-white my-2 md:my-6 transition duration-300 ease-in-out hover:bg-[#8A0019]"
               />
             </div>
           </div>
@@ -123,7 +123,7 @@ const Footer = () => {
                 className="rounded-sm w-8/12 md:w-full"
               />
             </div>
-            <p className="text-xs w-8/12 md:text-sm mt-2 transition duration-300 ease-in-out hover:text-red-100">
+            <p className="text-xs w-8/12 md:text-sm mt-2 transition duration-300 ease-in-out hover:text-[#8A0019]">
 
               {footerEvent.subTitle}
 

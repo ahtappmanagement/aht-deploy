@@ -23,7 +23,8 @@ const Card = (props) => {
         <Link href={`/products/${props.product.id}`}>
           <div
             href={`/products/${props.product.id}`}
-            className="h-48 w-48 mb-4  mx-auto">
+            className="h-48 w-48 mb-4  mx-auto"
+          >
             {props.product.image[0]?.length > 0 ? (
               <>
                 <img
@@ -74,7 +75,8 @@ const Card = (props) => {
           {props.product.image[1] ? (
             <Link
               href={`/products/${props.product.id}`}
-              className="middle w-full ">
+              className="middle w-full "
+            >
               <img
                 className=" rounded-md"
                 src={`${path}${props.product.image[1]}`}
@@ -86,7 +88,8 @@ const Card = (props) => {
           ) : (
             <Link
               href={`/products/${props.product.id}`}
-              className="middle w-full  ">
+              className="middle w-full  "
+            >
               <img
                 className=" rounded-md"
                 src={`${path}${props.product.image[0]}`}
@@ -100,8 +103,9 @@ const Card = (props) => {
       ) : (
         <Link
           href={`/products/${props.product.id}`}
-          className=" text-gray-700 ">
-          Go to product
+          className="middle w-full  "
+        >
+          <Image className=" rounded-md" src={noImage} />
           <button className="mx-auto text-red-500 text-2xl">
             <CgEnter />
           </button>

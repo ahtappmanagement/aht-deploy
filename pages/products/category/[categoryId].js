@@ -16,6 +16,13 @@ const Category = () => {
     );
   }, [categoryId, cat]);
 
+  // const myTimeout = setTimeout(myGreeting, 15000);
+
+  // function myGreeting() {
+  //   document.getElementById("noDataMessageContainer").innerHTML="please refresh, if it didn't work check your connection";
+  //   document.getElementById("loadingAnime").classList.remove("lds-spinner");
+  // }
+
   return (
     <div className="flex w-full justify-between  md:justify-evenly items-start md:p-8 md:mt-36 ">
       <Head>
@@ -28,10 +35,23 @@ const Category = () => {
           cat?.map((product) => <Card product={product} key={product.id} />)
         ) : (
           <div className="bg-red-30 w-full h-screen">
-            No Product is available under this category
+            <div class="lds-spinner mx-aut0 my-6">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            {/* <div id="noDataMessageContainer">{() => setTimeout()}</div> */}
           </div>
         )}
-        {/* </div> */}
       </div>
     </div>
   );

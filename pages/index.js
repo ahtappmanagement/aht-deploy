@@ -53,12 +53,12 @@ const Home = ({ /*popular ,*/ news, events }) => {
   return (
     <>
       {/* SLIDERS */} 
-      <div className="w-full">
+      <div className="w-full hidden md:block">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1}
           navigation
-          autoplay={{ delay: 8500, disableOnInteraction: false }}
+          autoplay={{ delay: 7500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           style={{ margin: "0 0 2rem 0" }}>
           {deskSlid?.map((slide, index = 0) => (
@@ -66,19 +66,36 @@ const Home = ({ /*popular ,*/ news, events }) => {
               <div className="mt-16 md:mt-36" key={index++}>
                 <Image
                   key={index++}
-                  className="w-9/12 mx-auto hidden md:block"
-                  src={deskSlid[index]}
+                  className="w-9/12 mx-auto mb-6 md:mb-2"
+                  src={slide}
                   alt="slider"
                   width={1200}
                   height={400}
                 />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="w-full px-2 md:hidden">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={1}
+          // navigation
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          style={{ margin: "0 0 2rem 0" }}>
+          {deskSlid?.map((slide, index = 0) => (
+            <SwiperSlide key={`${index++}`}>
+              <div className="mt-6" key={index++}>
                 <Image
                   key={index++}
-                  className="w-9/12 mx-auto md:hidden"
-                  src={phoneSlid[index]}
+                  className="w-full mx-auto mb-6"
+                  src={slide}
                   alt="slider"
-                  width={500}
-                  height={350}
+                  width={1200}
+                  height={400}
                 />
               </div>
             </SwiperSlide>
@@ -93,7 +110,7 @@ const Home = ({ /*popular ,*/ news, events }) => {
         className="w-full lg:p-8 block md:flex justify-around">
         {/* NEWSLETTERS */}
         <div className=" w-full md:w-8/12 mx-auto md:mx-[0]">
-          <div className="text-3xl md:text-[38px] text-[#7D2F2F] mb-4 ml-4">
+          <div className="text-xl font-semibold md:text-2xl text-[#7D2F2F] mb-4 ml-4">
             {" "}
             NEWS
           </div>
@@ -128,7 +145,7 @@ const Home = ({ /*popular ,*/ news, events }) => {
 
         {/* EVENTS */}
         <div id="events" className="w-full mx-auto md:w-3/12 mt-8 md:mt-0 ">
-          <div className=" text-3xl md:text[32px] text-[#7D2F2F] mb-0 m-4">
+          <div className=" text-xl font-semibold md:text-2xl text-[#7D2F2F] mb-0 m-4">
             {" "}
             UPCOMING EVENTS
           </div>
@@ -157,7 +174,7 @@ const Home = ({ /*popular ,*/ news, events }) => {
       </div>
 
       {/* POPULAR PRODUCTS  */}
-      <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULAR</p>
+      <p className="text-xl font-semibold md:text-2xl text-[#660100] m-4">POPULAR</p>
       {/* <YouMayLike /> */}
       <div id="popularWrapper" className="w-full md:p-8 ">
         <YouMayLike />

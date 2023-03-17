@@ -583,22 +583,10 @@ const Header = () => {
                 </span>
               </div>
               <div className={brandsEventSubList}>
-                <Link href={`#`} className={brandMobileView}>
                   <Image src={majestic} alt="majestic" className={brandImg} />
-                  MAJESTIC
-                </Link>
-                <Link href={`#`} className={brandMobileView}>
                   <Image src={peachFull} alt="peachFull" className={brandImg} />
-                  PEACH FULL
-                </Link>
-                <Link href={`#`} className={brandMobileView}>
                   <Image src={kindKids} alt="kindKids" className={brandImg} />
-                  KIND KIDS
-                </Link>
-                <Link href={`#`} className={brandMobileView}>
                   <Image src={queen} alt="queen" className={brandImg} />
-                  QUEEN DIAMOND
-                </Link>
               </div>
             </div>
 
