@@ -33,7 +33,9 @@ const Subcategory = () => {
       <Head>
         <title>AHT | product</title>
       </Head>
-      <SideNavigation />
+      <div className="hidden md:block">
+        <SideNavigation />
+      </div>
       {console.log(subcat)}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
         {subcat.length > 0 ? (
@@ -57,6 +59,10 @@ const Subcategory = () => {
             {/* <div id="noDataMessageContainer">{() => myTimeout()}</div> */}
           </div>
         )}
+
+        <div className="block md:hidden ml-[10%]">
+          <SideNavigation />
+        </div>
       </div>
     </div>
   );

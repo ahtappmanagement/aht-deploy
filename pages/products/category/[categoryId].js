@@ -24,11 +24,13 @@ const Category = () => {
   // }
 
   return (
-    <div className="flex w-full justify-between  md:justify-evenly items-start md:p-8 md:mt-36 ">
+    <div className="md:flex w-full justify-between  md:justify-evenly items-start md:p-8 md:mt-36 ">
       <Head>
         <title>AHT | product</title>
       </Head>
-      <SideNavigation />
+      <div className="hidden md:block">
+        <SideNavigation />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
         {console.log(cat)}
         {cat.length > 0 ? (
@@ -52,6 +54,9 @@ const Category = () => {
             {/* <div id="noDataMessageContainer">{() => setTimeout()}</div> */}
           </div>
         )}
+        <div className="block md:hidden ml-[10%]">
+          <SideNavigation />
+        </div>
       </div>
     </div>
   );
