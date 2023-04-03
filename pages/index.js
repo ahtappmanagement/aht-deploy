@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { api, path, products, category } from "config/api";
 import desktopSlider from "../assets/desktopSlider/index";
-import phoneSlider from "../assets/phoneSlider/index";
 import Card from "@/components/card";
 import YouMayLike from "@/components/YouMayLike";
 
