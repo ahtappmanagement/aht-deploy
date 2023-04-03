@@ -95,6 +95,60 @@ const Header = () => {
           </div>
 
           {product && (
+            <div className="shadow-inner">
+              <Link
+                href={`/${products}/category/5&type=bulk`}
+                className={productMobileView}
+                onClick={() => closeMenues()}
+
+              >
+                NUTS <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/1&type=bulk`}
+                className={productMobileView}
+                onClick={() => closeMenues()}
+
+              >
+                SUN-DRIED FRUITS <MdOutlineArrowRight />
+              </Link>
+
+              <Link
+                href={`/${products}/category/2&type=bulk`}
+                className={productMobileView}
+                onClick={() => closeMenues()}
+
+              >
+                AIR-DRIED FRUITS <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/3&type=bulk`}
+                className={productMobileView}
+                onClick={() => closeMenues()}
+
+              >
+                FREEZE-DRIED FRUITS & VEG
+                <MdOutlineArrowRight />
+              </Link>
+              <Link
+                href={`/${products}/category/6&type=bulk`}
+                className={productMobileView}
+                onClick={() => closeMenues()}
+
+              >
+                SAFFRON <MdOutlineArrowRight />
+              </Link>
+            </div>
+          )}
+
+          <div className={navItemListPhoneView}>
+            <div onClick={() => setBulk(!bulk)} className={navItemPhoneView}>
+              PRODUCTS PRIVATE LABLE
+            </div>
+          </div>
+          {/* BULK PRODUCT TOGGLE  */}
+
+          {bulk && (
             <div className=" shadow-inner">
               <Link
                 href={`/${products}/category/5&type=retail`}
@@ -133,60 +187,6 @@ const Header = () => {
               </Link>
               <Link
                 href={`/${products}/category/6&type=retail`}
-                className={productMobileView}
-                onClick={() => closeMenues()}
-
-              >
-                SAFFRON <MdOutlineArrowRight />
-              </Link>
-            </div>
-          )}
-
-          <div className={navItemListPhoneView}>
-            <div onClick={() => setBulk(!bulk)} className={navItemPhoneView}>
-              PRODUCTS PRIVATE LABLE
-            </div>
-          </div>
-          {/* BULK PRODUCT TOGGLE  */}
-
-          {bulk && (
-            <div className="shadow-inner">
-              <Link
-                href={`/${products}/category/5&type=bulk`}
-                className={productMobileView}
-                onClick={() => closeMenues()}
-
-              >
-                NUTS <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`/${products}/category/1&type=bulk`}
-                className={productMobileView}
-                onClick={() => closeMenues()}
-
-              >
-                SUN-DRIED FRUITS <MdOutlineArrowRight />
-              </Link>
-
-              <Link
-                href={`/${products}/category/2&type=bulk`}
-                className={productMobileView}
-                onClick={() => closeMenues()}
-
-              >
-                AIR-DRIED FRUITS <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`/${products}/category/3&type=bulk`}
-                className={productMobileView}
-                onClick={() => closeMenues()}
-
-              >
-                FREEZE-DRIED FRUITS & VEG
-                <MdOutlineArrowRight />
-              </Link>
-              <Link
-                href={`/${products}/category/6&type=bulk`}
                 className={productMobileView}
                 onClick={() => closeMenues()}
 
