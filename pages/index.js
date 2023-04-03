@@ -42,9 +42,7 @@ export const getStaticProps = async () => {
 //--------------------------------------------COMPONENT--------------------------------------------//
 
 const Home = ({ /*popular ,*/ news, events }) => {
-  const phoneSlid = [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT];
   const deskSlid = [
-    desktopSlider.happy,
     desktopSlider.PistaD,
     desktopSlider.FigsD,
     desktopSlider.AHTD
