@@ -42,9 +42,13 @@ export const getStaticProps = async () => {
 
 const Home = ({ /*popular ,*/ news, events }) => {
   const deskSlid = [
+    desktopSlider.DatesD,
     desktopSlider.PistaD,
+    desktopSlider.SaffronD,
     desktopSlider.FigsD,
-    desktopSlider.AHTD
+    desktopSlider.DatePowderD,
+    desktopSlider.AHTD,
+    desktopSlider.RaisinsD,
   ];
 
   return (
@@ -63,7 +67,7 @@ const Home = ({ /*popular ,*/ news, events }) => {
               <div className="mt-16 md:mt-36" key={index++}>
                 <Image
                   key={index++}
-                  className="w-9/12 mx-auto mb-6 md:mb-2"
+                  className="w-11/12 mx-auto mb-6 md:mb-2"
                   src={slide}
                   alt="slider"
                   width={1200}
